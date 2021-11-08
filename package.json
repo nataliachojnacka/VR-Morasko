@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/nataliachojnacka/VR-Morasko/issues"
   },
-  "homepage": "https://github.com/nataliachojnacka/VR-Morasko#readme"
+  "homepage": "https://github.com/nataliachojnacka/VR-Morasko#readme",
+  "dependencies": {
+    "aframe-openlayers-component": "^1.0.2",
+    "ol": "^6.9.0"
+  }
 }
