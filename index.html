@@ -1,52 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>VR Morasko</title>
-    <meta name="description" content="Hello, WebVR! • A-Frame" />
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/3dstreet@0.1.1/dist/aframe-street-component.js"></script>
-    <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
-    <script src="https://unpkg.com/aframe-mapbox-component/dist/aframe-mapbox-component.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR-Morasko</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <a-scene background="color: #ECECEC">
-      <a-plane
-        position="0 0 0"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-        shadow
-        geometry="primitive: plane; width: 512; height: 512;"
-        material="color: #ffffff; shader: flat; side: both; transparent: true;"
-        mapbox="center: 16.941672631681435, 52.46405546488059; zoom: 18; 
-          accessToken: pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg;
-          style: mapbox://styles/nataliachojnacka/cklun5fv90ujz17o5h7f37uq4;
-          pxToWorldRatio: 4;"
-      ></a-plane>
-      <a-assets>
-        <a-asset-item id="test" src="./models/scene/scene.gltf"></a-asset-item>
-      </a-assets>
-      <a-entity
-        scale="0.03 0.03 0.03"
-        rotation="0 0 0"
-        position="85 0 -40"
-        gltf-model="#test"
-      >
-      </a-entity>
-      <a-camera position="5 1 45"></a-camera>
-    </a-scene>
-    <!-- <script>
-      const mapEl = document.getElementById("map");
-      const wngig = document.querySelector("#wngig");
-      var setProperty = window.AFRAME.utils.entity.setComponentProperty;
-      const lng = 16.941676163944447;
-      const lat = 52.46403773632589;
+    <div id="map"></div>
+    <script>
+      // TO MAKE THE MAP APPEAR YOU MUST
+      // ADD YOUR ACCESS TOKEN FROM
+      // https://account.mapbox.com
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg";
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/nataliachojnacka/ckxryccw00aga15t3pfu3eops",
+        center: [16.933, 52.466],
+        zoom: 14.5,
+      });
 
-      setProperty(mapEl, "mapbox.center", lng + "," + lat);
-      setProperty(mapEl, "mapbox.zoom", "16");
-      // setProperty(wngig, "position", mapEl.components.mapbox.project(lng, lat));
-    </script> -->
+      map.addControl(new mapboxgl.NavigationControl());
+
+      const wngig = new mapboxgl.Marker({ color: "green" })
+        .setLngLat([16.94166543510847, 52.46409002943602])
+        .addTo(map);
+
+      const wmi = new mapboxgl.Marker({ color: "green" })
+        .setLngLat([16.92721005232671, 52.46720828691712])
+        .addTo(map);
+
+      const hist = new mapboxgl.Marker({ color: "green" })
+        .setLngLat([16.920959814962487, 52.46657299052419])
+        .addTo(map);
+
+      wngig.getElement().addEventListener("click", () => {
+        location.href = "./wngig.html";
+      });
+
+      wmi.getElement().addEventListener("click", () => {
+        location.href = "./wmi.html";
+      });
+
+      hist.getElement().addEventListener("click", () => {
+        location.href = "./hist.html";
+      });
+
+      const departments = [wngig, wmi, hist];
+
+      departments.forEach((department) => {
+        department.getElement().style.cursor = "pointer";
+      });
+    </script>
   </body>
 </html>

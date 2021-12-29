@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VR Morasko</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/3dstreet@0.1.1/dist/aframe-street-component.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-mapbox-component/dist/aframe-mapbox-component.min.js"></script>
+  </head>
+  <body>
+    <span>Hello</span>
+    <a-scene background="color: #ECECEC">
+      <a-entity oculus-touch-controls="hand: left"></a-entity>
+      <a-entity oculus-touch-controls="hand: right"></a-entity>
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="4"
+        height="4"
+        color="#7BC8A4"
+        shadow
+        geometry="primitive: plane; width: 512; height: 512;"
+        material="color: #ffffff; shader: flat; side: both; transparent: true;"
+        mapbox="center: 16.941672631681435, 52.46405546488059; zoom: 18; 
+          accessToken: pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg;
+          style: mapbox://styles/nataliachojnacka/cklun5fv90ujz17o5h7f37uq4;
+          pxToWorldRatio: 4;"
+      ></a-plane>
+      <a-assets>
+        <a-asset-item id="wngig" src="./models/wngig/scene.gltf"></a-asset-item>
+      </a-assets>
+      <a-entity
+        scale="0.03 0.03 0.03"
+        rotation="0 0 0"
+        position="85 0 -40"
+        gltf-model="#wngig"
+      >
+      </a-entity>
+      <a-camera position="5 1 45"></a-camera>
+    </a-scene>
+    <!-- <script>
+      const mapEl = document.getElementById("map");
+      const wngig = document.querySelector("#wngig");
+      var setProperty = window.AFRAME.utils.entity.setComponentProperty;
+      const lng = 16.941676163944447;
+      const lat = 52.46403773632589;
+
+      setProperty(mapEl, "mapbox.center", lng + "," + lat);
+      setProperty(mapEl, "mapbox.zoom", "16");
+      // setProperty(wngig, "position", mapEl.components.mapbox.project(lng, lat));
+    </script> -->
+  </body>
+</html>
