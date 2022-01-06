@@ -11,6 +11,8 @@
     />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
       body {
         margin: 0;
         padding: 0;
@@ -21,54 +23,34 @@
         bottom: 0;
         width: 100%;
       }
+      .tooltip {
+        font-size: 14px;
+        font-family: "Roboto", sans-serif !important;
+      }
+      .navbar {
+        z-index: 999;
+        position: absolute;
+        background-color: #36363675;
+        width: 100%;
+        height: 9%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1%;
+        font-size: 28px;
+        font-family: "Roboto", sans-serif;
+        text-shadow: 2px 2px #444444;
+      }
+
+      .mapboxgl-ctrl-top-right {
+        top: 9%;
+      }
     </style>
   </head>
   <body>
+    <div class="navbar">VR Morasko - Wirtualna Mapa Kampusu</div>
     <div id="map"></div>
-    <script>
-      // TO MAKE THE MAP APPEAR YOU MUST
-      // ADD YOUR ACCESS TOKEN FROM
-      // https://account.mapbox.com
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg";
-      const map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/nataliachojnacka/ckxryccw00aga15t3pfu3eops",
-        center: [16.933, 52.466],
-        zoom: 14.5,
-      });
-
-      map.addControl(new mapboxgl.NavigationControl());
-
-      const wngig = new mapboxgl.Marker({ color: "green" })
-        .setLngLat([16.94166543510847, 52.46409002943602])
-        .addTo(map);
-
-      const wmi = new mapboxgl.Marker({ color: "green" })
-        .setLngLat([16.92721005232671, 52.46720828691712])
-        .addTo(map);
-
-      const hist = new mapboxgl.Marker({ color: "green" })
-        .setLngLat([16.920959814962487, 52.46657299052419])
-        .addTo(map);
-
-      wngig.getElement().addEventListener("click", () => {
-        location.href = "./wngig.html";
-      });
-
-      wmi.getElement().addEventListener("click", () => {
-        location.href = "./wmi.html";
-      });
-
-      hist.getElement().addEventListener("click", () => {
-        location.href = "./hist.html";
-      });
-
-      const departments = [wngig, wmi, hist];
-
-      departments.forEach((department) => {
-        department.getElement().style.cursor = "pointer";
-      });
-    </script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
