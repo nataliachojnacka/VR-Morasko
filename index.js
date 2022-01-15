@@ -7,6 +7,11 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/light-v10",
   center: [16.933, 52.466],
   zoom: 14.5,
+  // https://docs.mapbox.com/mapbox-gl-js/example/restrict-bounds/
+  maxBounds: [
+    [16.619, 52.271],
+    [17.27, 52.581],
+  ],
 });
 
 map.addControl(new mapboxgl.NavigationControl());

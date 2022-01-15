@@ -53,17 +53,23 @@
       .arrow__link {
         padding-left: 1%;
       }
+      .hide {
+        display: none;
+      }
+      .a-loader-title {
+        display: none !important;
+      }
     </style>
   </head>
   <body>
-    <div class="navbar">
-      <a href="./index.html" class="arrow__link">
+    <nav class="navbar hide">
+      <a href="./" class="arrow__link">
         <i class="fa-solid fa-angle-left arrow" id="arrow"></i
       ></a>
       <div class="title__wrapper">
         <div class="title">Wydział Nauk Geograficznych i Geologicznych</div>
       </div>
-    </div>
+    </nav>
     <a-scene background="color: #CFEBFD">
       <a-entity oculus-touch-controls="hand: left"></a-entity>
       <a-entity oculus-touch-controls="hand: right"></a-entity>
@@ -132,9 +138,9 @@
       </a-entity>
     </a-scene>
     <script>
-      document.getElementById("arrow").onclick = function () {
-        location.href = "./index.html";
-      };
+      document.querySelector("a-scene").addEventListener("loaded", function () {
+        document.querySelector("nav").classList.remove("hide");
+      });
     </script>
   </body>
 </html>
