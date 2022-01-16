@@ -101,17 +101,34 @@
         id="cameraRig"
         position="-40 0 -5"
         rotation="0 -103 0"
-        movement-controls="speed: 1; fly: true; camera: #head;"
+        movement-controls="speed: 10; constrainToNavMesh: false;"
         position-limit="ymin: 0; ymax: 100;"
+        navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision;"
       >
         <a-entity
           id="head"
           camera="active: true"
-          look-controls
+          look-controls="pointerLockEnabled: false; reverseMouseDrag: false"
           position="0 5 0"
           wasd-controls
         ></a-entity>
-        <a-mixin
+        <!-- Left Controller -->
+        <a-entity
+          id="leftHand"
+          hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF"
+          teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60"
+          visible="true"
+        ></a-entity>
+        <!-- Right Controller -->
+        <a-entity
+          id="rightHand"
+          hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF"
+          laser-controls
+          raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;"
+          line="color: #7cfc00; opacity: 0.5"
+          visible="true"
+        ></a-entity>
+        <!-- <a-mixin
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
           raycaster="far: 2; showLine: true; objects: .clickable;"
@@ -134,7 +151,7 @@
           daydream-controls="hand: right;"
           gearvr-controls="hand: right;"
         >
-        </a-entity>
+        </a-entity> -->
       </a-entity>
     </a-scene>
     <script>
