@@ -8,6 +8,9 @@
     <script src="https://unpkg.com/3dstreet@0.1.1/dist/aframe-street-component.js"></script>
     <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
     <script src="https://unpkg.com/aframe-mapbox-component/dist/aframe-mapbox-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.pathfinding.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -101,7 +104,7 @@
         id="cameraRig"
         position="-40 0 -5"
         rotation="0 -103 0"
-        movement-controls="speed: 10; constrainToNavMesh: false;"
+        movement-controls="speed: 2; constrainToNavMesh: false;"
         position-limit="ymin: 0; ymax: 100;"
         navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision;"
       >
@@ -113,28 +116,17 @@
           wasd-controls
         ></a-entity>
         <!-- Left Controller -->
-        <a-entity
-          id="leftHand"
-          hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF"
-          teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60"
-          visible="true"
-        ></a-entity>
-        <!-- Right Controller -->
-        <a-entity
-          id="rightHand"
-          hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF"
-          laser-controls
-          raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;"
-          line="color: #7cfc00; opacity: 0.5"
-          visible="true"
-        ></a-entity>
-        <!-- <a-mixin
+        <a-mixin
+          id="teleport"
+          teleport-controls="cameraRig: #cameraRig; button: trigger; teleportOrigin: #head; collisionEntities: #ground; curveShootingSpeed: 25; curveNumberPoints: 100;"
+        ></a-mixin>
+        <a-mixin
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
           raycaster="far: 2; showLine: true; objects: .clickable;"
         ></a-mixin>
         <a-entity
-          id="left-hand"
+          id="leftHand"
           mixin="teleport"
           oculus-touch-controls="hand: left;"
           vive-controls="hand: left;"
@@ -142,22 +134,42 @@
           daydream-controls="hand: left;"
           gearvr-controls="hand: left;"
         ></a-entity>
+        <!-- Right Controller -->
         <a-entity
-          id="right-hand"
+          id="rightHand"
           mixin="teleport"
           oculus-touch-controls="hand: right;"
           vive-controls="hand: right;"
           windows-motion-controls="hand: right;"
           daydream-controls="hand: right;"
           gearvr-controls="hand: right;"
-        >
-        </a-entity> -->
+        ></a-entity>
       </a-entity>
     </a-scene>
     <script>
       document.querySelector("a-scene").addEventListener("loaded", function () {
         document.querySelector("nav").classList.remove("hide");
       });
+
+      // AFRAME.registerComponent("thumbstick-logging", {
+      //   init: function () {
+      //     this.el.addEventListener("thumbstickmoved", this.logThumbstick);
+      //   },
+      //   logThumbstick: function (evt) {
+      //     if (evt.detail.y > 0.95) {
+      //       console.log("DOWN");
+      //     }
+      //     if (evt.detail.y < -0.95) {
+      //       console.log("UP");
+      //     }
+      //     if (evt.detail.x < -0.95) {
+      //       console.log("LEFT");
+      //     }
+      //     if (evt.detail.x > 0.95) {
+      //       console.log("RIGHT");
+      //     }
+      //   },
+      // });
     </script>
   </body>
 </html>
