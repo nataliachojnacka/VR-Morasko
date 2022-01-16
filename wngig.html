@@ -104,7 +104,7 @@
         id="cameraRig"
         position="-40 0 -5"
         rotation="0 -103 0"
-        movement-controls="speed: 2; constrainToNavMesh: false;"
+        movement-controls="speed: 1; constrainToNavMesh: false;"
         position-limit="ymin: 0; ymax: 100;"
         navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision;"
       >
@@ -123,7 +123,9 @@
         <a-mixin
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
-          raycaster="far: 2; showLine: true; objects: .clickable;"
+          laser-controls
+          raycaster="far: 2; showLine: true; objects: .clickable; a-link;"
+          line="color: #179dfc; opacity: 0.5"
         ></a-mixin>
         <a-entity
           id="leftHand"
