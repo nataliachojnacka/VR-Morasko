@@ -67,7 +67,7 @@
         <i class="fa-solid fa-angle-left arrow" id="arrow"></i
       ></a>
       <div class="title__wrapper">
-        <div class="title">Wydział Nauk Politycznych i Dziennikarstwa</div>
+        <div class="title">Wydział Fizyki</div>
       </div>
     </nav>
     <a-scene background="color: #CFEBFD">
@@ -82,28 +82,25 @@
         shadow
         geometry="primitive: plane; width: 512; height: 512;"
         material="color: #ffffff; shader: flat; side: both; transparent: true;"
-        mapbox="center: 16.924678297661075, 52.46569628663713; zoom: 19; 
+        mapbox="center: 16.929584983924332, 52.46656035304659; zoom: 18; 
           accessToken: pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg;
           style: mapbox://styles/nataliachojnacka/cklun5fv90ujz17o5h7f37uq4;
           pxToWorldRatio: 4;"
       ></a-plane>
       <a-assets>
-        <a-asset-item
-          id="wnpid"
-          src="./models/polityczny/scene.gltf"
-        ></a-asset-item>
+        <a-asset-item id="fiz" src="./models/fiz/scene.gltf"></a-asset-item>
       </a-assets>
       <a-entity
-        scale="0.07 0.07 0.07"
+        scale="0.035 0.035 0.035"
         rotation="0 0 0"
-        position="-12.222 0 30.563"
-        gltf-model="#wnpid"
+        position="172.797 -122 -51.457"
+        gltf-model="#fiz"
       >
       </a-entity>
       <a-entity
         id="cameraRig"
-        position="50 0 -140"
-        rotation="0 -200 0"
+        position="-80.363 0 160"
+        rotation="0 -45 0"
         movement-controls="speed: 1; fly: true; camera: #head;"
         position-limit="ymin: 0; ymax: 100;"
       >

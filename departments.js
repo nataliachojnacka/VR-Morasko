@@ -27,7 +27,7 @@ export default {
           id: 2,
           name: "fiz",
           fullname: "Wydział Fizyki",
-          url: "./wngig.html",
+          url: "./fiz.html",
         },
         geometry: {
           type: "Point",
@@ -53,7 +53,7 @@ export default {
           id: 4,
           name: "bio",
           fullname: "Wydział Biologii",
-          url: "./wngig.html",
+          url: "./bio.html",
         },
         geometry: {
           type: "Point",
@@ -66,7 +66,7 @@ export default {
           id: 5,
           name: "wnpid",
           fullname: "Wydział Nauk Politycznych i Dziennikarstwa",
-          url: "./wngig.html",
+          url: "./polityczny.html",
         },
         geometry: {
           type: "Point",
@@ -79,7 +79,7 @@ export default {
           id: 6,
           name: "chem",
           fullname: "Wydział Chemii",
-          url: "./wngig.html",
+          url: "./chem.html",
         },
         geometry: {
           type: "Point",

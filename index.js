@@ -5,8 +5,8 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/light-v10",
-  center: [16.933, 52.466],
-  zoom: 14.5,
+  center: [16.9317, 52.4665],
+  zoom: 15.2,
   // https://docs.mapbox.com/mapbox-gl-js/example/restrict-bounds/
   maxBounds: [
     [16.619, 52.271],

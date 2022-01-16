@@ -1,0 +1,11 @@
+Model Information:
+* title:	chemiczny
+* source:	https://sketchfab.com/3d-models/chemiczny-ec0bc50d46114bf8b3086417399db8c6
+* author:	natalia.chojnacka (https://sketchfab.com/natalia.chojnacka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "chemiczny" (https://sketchfab.com/3d-models/chemiczny-ec0bc50d46114bf8b3086417399db8c6) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

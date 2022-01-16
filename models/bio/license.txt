@@ -1,0 +1,11 @@
+Model Information:
+* title:	wydzial biologii
+* source:	https://sketchfab.com/3d-models/wydzial-biologii-5dae61f7c6144032a95b1dbff46b44ab
+* author:	natalia.chojnacka (https://sketchfab.com/natalia.chojnacka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "wydzial biologii" (https://sketchfab.com/3d-models/wydzial-biologii-5dae61f7c6144032a95b1dbff46b44ab) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
