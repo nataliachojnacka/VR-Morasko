@@ -74,8 +74,6 @@
       </div>
     </nav>
     <a-scene background="color: #CFEBFD">
-      <a-entity oculus-touch-controls="hand: left"></a-entity>
-      <a-entity oculus-touch-controls="hand: right"></a-entity>
       <a-plane
         position="0 0 0"
         rotation="-90 0 0"
@@ -112,7 +110,7 @@
           id="head"
           camera="active: true"
           look-controls="pointerLockEnabled: false; reverseMouseDrag: false"
-          position="0 5 0"
+          position="0 8 0"
           wasd-controls
         ></a-entity>
         <!-- Left Controller -->
@@ -123,9 +121,7 @@
         <a-mixin
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
-          laser-controls
           raycaster="far: 2; showLine: true; objects: .clickable; a-link;"
-          line="color: #179dfc; opacity: 0.5"
         ></a-mixin>
         <a-entity
           id="leftHand"
