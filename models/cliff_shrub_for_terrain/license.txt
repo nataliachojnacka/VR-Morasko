@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cliff Shrub For Terrain
+* source:	https://sketchfab.com/3d-models/cliff-shrub-for-terrain-7a0f2bf2982c4ff8bacc67856fdbfae2
+* author:	Natural_Disbuster (https://sketchfab.com/lemedesign)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cliff Shrub For Terrain" (https://sketchfab.com/3d-models/cliff-shrub-for-terrain-7a0f2bf2982c4ff8bacc67856fdbfae2) by Natural_Disbuster (https://sketchfab.com/lemedesign) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

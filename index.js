@@ -4,7 +4,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg";
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/light-v10",
+  style: "mapbox://styles/nataliachojnacka/ckyizypw09flx14nu925dznzr",
   center: [16.9317, 52.4665],
   zoom: 15.2,
   // https://docs.mapbox.com/mapbox-gl-js/example/restrict-bounds/
