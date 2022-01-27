@@ -1,6 +1,6 @@
 Model Information:
-* title:	Hist
-* source:	https://sketchfab.com/3d-models/hist-d462acc2846f46bbaefab8db2dc3c246
+* title:	HIST
+* source:	https://sketchfab.com/3d-models/hist-bd56ae5840f54cf6920da2757643c3dc
 * author:	natalia.chojnacka (https://sketchfab.com/natalia.chojnacka)
 
 Model License:
@@ -8,4 +8,4 @@ Model License:
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Hist" (https://sketchfab.com/3d-models/hist-d462acc2846f46bbaefab8db2dc3c246) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "HIST" (https://sketchfab.com/3d-models/hist-bd56ae5840f54cf6920da2757643c3dc) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

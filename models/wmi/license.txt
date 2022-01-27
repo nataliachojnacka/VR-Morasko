@@ -1,6 +1,6 @@
 Model Information:
 * title:	WMI
-* source:	https://sketchfab.com/3d-models/wmi-56ff916a9ab34a429a4f515ffbdcf0d8
+* source:	https://sketchfab.com/3d-models/wmi-20e6485325fa4bc9abce8336496919e9
 * author:	natalia.chojnacka (https://sketchfab.com/natalia.chojnacka)
 
 Model License:
@@ -8,4 +8,4 @@ Model License:
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "WMI" (https://sketchfab.com/3d-models/wmi-56ff916a9ab34a429a4f515ffbdcf0d8) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "WMI" (https://sketchfab.com/3d-models/wmi-20e6485325fa4bc9abce8336496919e9) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
