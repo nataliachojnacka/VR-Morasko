@@ -1,6 +1,6 @@
 Model Information:
-* title:	WNGIG
-* source:	https://sketchfab.com/3d-models/wngig-54f40f8de35b4d5e808e69adaa8bf264
+* title:	WNGIG1
+* source:	https://sketchfab.com/3d-models/wngig1-04cbcb31b1fa4767a152f28f11a63664
 * author:	natalia.chojnacka (https://sketchfab.com/natalia.chojnacka)
 
 Model License:
@@ -8,4 +8,4 @@ Model License:
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "WNGIG" (https://sketchfab.com/3d-models/wngig-54f40f8de35b4d5e808e69adaa8bf264) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "WNGIG1" (https://sketchfab.com/3d-models/wngig1-04cbcb31b1fa4767a152f28f11a63664) by natalia.chojnacka (https://sketchfab.com/natalia.chojnacka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
