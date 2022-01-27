@@ -17,7 +17,7 @@ const map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on("load", () => {
-  map.loadImage("./education.png", (error, image) => {
+  map.loadImage("./assets/education.png", (error, image) => {
     if (error) throw error;
     map.addImage("education", image);
 
@@ -45,6 +45,8 @@ map.on("load", () => {
 
       const coordinates = e.features[0].geometry.coordinates.slice();
       const fullName = e.features[0].properties.fullname;
+      const photo = e.features[0].properties.photo;
+      const address = e.features[0].properties.address;
 
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;

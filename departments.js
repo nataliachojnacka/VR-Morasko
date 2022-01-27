@@ -15,6 +15,9 @@ export default {
           name: "wngig",
           fullname: "Wydział Nauk Geograficznych i Geologicznych",
           url: "./wngig.html",
+          address: "Bogumiła Krygowskiego 10, Poznań",
+          photo:
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwngig.amu.edu.pl%2Fen&psig=AOvVaw3MrgB5y5y8qJYokC9hwyeo&ust=1643383728148000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNiEoM-f0vUCFQAAAAAdAAAAABAD",
         },
         geometry: {
           type: "Point",
