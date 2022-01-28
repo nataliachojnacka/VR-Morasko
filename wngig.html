@@ -216,7 +216,7 @@
       >
       </a-entity>
 
-      <a-entity
+      <!-- <a-entity
         scale="3 3 3"
         rotation="0 70 0"
         position="-183.635 0 -26.983"
@@ -250,7 +250,7 @@
         position="-210.301 0 71.343"
         gltf-model="#trees"
       >
-      </a-entity>
+      </a-entity> -->
 
       <a-entity
         id="cameraRig"
@@ -268,7 +268,7 @@
           wasd-controls
         ></a-entity>
         <!-- Left Controller -->
-        <!-- <a-mixin
+        <a-mixin
           id="teleport"
           teleport-controls="cameraRig: #cameraRig; button: trigger; teleportOrigin: #head; collisionEntities: #ground; curveShootingSpeed: 25; curveNumberPoints: 100;"
         ></a-mixin>
@@ -276,7 +276,7 @@
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
           raycaster="far: 2; showLine: true; objects: .clickable; a-link;"
-        ></a-mixin> -->
+        ></a-mixin>
         <a-entity
           id="leftHand"
           oculus-touch-controls="hand: left;"
@@ -284,7 +284,7 @@
           windows-motion-controls="hand: left;"
           daydream-controls="hand: left;"
           gearvr-controls="hand: left;"
-          teleport-controls
+          mixin="teleport"
         >
           ></a-entity
         >
@@ -296,7 +296,7 @@
           windows-motion-controls="hand: right;"
           daydream-controls="hand: right;"
           gearvr-controls="hand: right;"
-          teleport-controls
+          mixin="teleport"
         >
           ></a-entity
         >
