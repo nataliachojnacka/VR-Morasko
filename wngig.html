@@ -85,7 +85,7 @@
         material="color: #ffffff; shader: flat; side: both; transparent: true;"
         mapbox="center: 16.942596106214767, 52.464413837120315; zoom: 18; 
           accessToken: pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg;
-          style: mapbox://styles/nataliachojnacka/cklun5fv90ujz17o5h7f37uq4;
+          style: mapbox://styles/nataliachojnacka/ckxryccw00aga15t3pfu3eops;
           pxToWorldRatio: 4;"
       ></a-plane>
       <a-assets>
@@ -329,7 +329,7 @@
           wasd-controls
         ></a-entity>
         <!-- Left Controller -->
-        <a-mixin
+        <!-- <a-mixin
           id="teleport"
           teleport-controls="cameraRig: #cameraRig; button: trigger; teleportOrigin: #head; collisionEntities: #ground; curveShootingSpeed: 25; curveNumberPoints: 100;"
         ></a-mixin>
@@ -337,10 +337,9 @@
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
           raycaster="far: 2; showLine: true; objects: .clickable; a-link;"
-        ></a-mixin>
+        ></a-mixin> -->
         <a-entity
           id="leftHand"
-          mixin="teleport"
           oculus-touch-controls="hand: left;"
           vive-controls="hand: left;"
           windows-motion-controls="hand: left;"
@@ -350,7 +349,6 @@
         <!-- Right Controller -->
         <a-entity
           id="rightHand"
-          mixin="teleport"
           oculus-touch-controls="hand: right;"
           vive-controls="hand: right;"
           windows-motion-controls="hand: right;"
