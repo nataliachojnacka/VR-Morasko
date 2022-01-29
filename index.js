@@ -34,12 +34,15 @@ map.on("load", () => {
     });
     const popup = new mapboxgl.Popup({
       closeButton: true,
+      // dzięki true jak klikniemy poza dialog to zamknie się
       closeOnClick: true,
       className: "tooltip",
       maxWidth: "none",
       offset: 24,
     });
 
+    // metoda zwracjąca stringa z HTMLem popupu
+    // budujemy go z danych ficzera za pomocą template stringów
     const getPopupHtml = (name, address, photo, url) => {
       return `<div class="popup__header">${name}</div>
       <div class="popup__address">${address}</div>
@@ -53,6 +56,7 @@ map.on("load", () => {
     };
 
     map.on("click", "departments", (e) => {
+      // wyciągamy ficzer z danych
       const feature = e.features[0];
 
       const coordinates = feature.geometry.coordinates.slice();
@@ -65,23 +69,26 @@ map.on("load", () => {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
+      // ustawiamy HTML popupu na to co zwróci metoda getPopupHtml
       popup
         .setLngLat(coordinates)
         .setHTML(getPopupHtml(fullName, address, photo, url))
         .addTo(map);
     });
-
+    // zmiana kursora na zjechane z ficzra
     map.on("mouseleave", "departments", () => {
       map.getCanvas().style.cursor = "";
     });
-
+    // zmiana kursora na najechanie
     map.on("mouseenter", "departments", () => {
       map.getCanvas().style.cursor = "pointer";
     });
   });
 });
 
+// nasłuchiwanie na event DOMContentLoaded (załadowanie DOM) i wtedy wywołanie funkcji dialogywch. Trzeba czekać, żeby DOM się załadował, bo wcześniej nie ma jeszcze elementów DOM.
 document.addEventListener("DOMContentLoaded", () => {
+  // obiekt z elementami DOM, żeby później za każdym razem nie wywoływać getElementsByClassName jak chcemy coś z którymś zrobić
   const elements = {
     dialog: document.getElementsByClassName("dialog")[0],
     buttonDialogClose: document.getElementsByClassName(
@@ -90,22 +97,31 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonInfo: document.getElementsByClassName("button__info")[0],
   };
 
+  // wyciągnięcie z Local Storage zmiennej dialogAccepted i przypisanie jej do zmiennej dialogAccepted. JSON.parse musi być bo z LS wszystko wychodzi jako string i chcemy to zamienić na obiekt
   const dialogAccepted = JSON.parse(localStorage.getItem("dialogAccepted"));
 
+  // funckja uruchamiana od razu po załadowaniu DOM (na samym dole). Sprawdza czy zaakceptowaliśmy już dialog - jeśli tak to nie wyświetla go, jeśli nie to dialog jest wyświetlany na start
   const manageDialogOnInit = () => {
     if (!dialogAccepted) {
       showDialog();
     }
   };
-
+  // funckja ukrywająca dialog
   const hideDialog = () => {
+    // dodanie klasy hide
     elements.dialog.classList.add("hide");
+    // po ukryciu dialogu zapisujemy do LS, że już go widzieliśmy i wtedy się nie wyświetla na start
     localStorage.setItem("dialogAccepted", true);
   };
+  // wyświetlenie dialog
   const showDialog = () => {
+    // usunięcie klasy hide
     elements.dialog.classList.remove("hide");
   };
+  // przypięcie listenera do przycisku zamykającego dialog
   elements.buttonDialogClose.addEventListener("click", hideDialog);
+  // przypięcie listenera do przycisku otwierającego dialog
   elements.buttonInfo.addEventListener("click", showDialog);
+  // wywołanie metody sprawdzającej czy otworzyć dialog na start
   manageDialogOnInit();
 });
