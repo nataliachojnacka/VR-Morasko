@@ -32,36 +32,80 @@ map.on("load", () => {
         "icon-size": 0.11,
       },
     });
-
     const popup = new mapboxgl.Popup({
-      closeButton: false,
-      closeOnClick: false,
+      closeButton: true,
+      closeOnClick: true,
       className: "tooltip",
       maxWidth: "none",
+      offset: 24,
     });
 
-    map.on("mouseenter", "departments", (e) => {
-      map.getCanvas().style.cursor = "pointer";
+    const getPopupHtml = (name, address, photo, url) => {
+      return `<div class="popup__header">${name}</div>
+      <div class="popup__address">${address}</div>
+      <div class="photo__wrapper">
+      <img class="popup__photo" src="${photo}">
+      </div>
+    <div class="popup__button">
+    <a href="${url}">Zobacz</a>
+    </div>
+      `;
+    };
 
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      const fullName = e.features[0].properties.fullname;
-      const photo = e.features[0].properties.photo;
-      const address = e.features[0].properties.address;
+    map.on("click", "departments", (e) => {
+      const feature = e.features[0];
+
+      const coordinates = feature.geometry.coordinates.slice();
+      const fullName = feature.properties.fullname;
+      const photo = feature.properties.photo;
+      const address = feature.properties.address;
+      const url = feature.properties.url;
 
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
-      popup.setLngLat(coordinates).setHTML(fullName).addTo(map);
+      popup
+        .setLngLat(coordinates)
+        .setHTML(getPopupHtml(fullName, address, photo, url))
+        .addTo(map);
     });
 
     map.on("mouseleave", "departments", () => {
       map.getCanvas().style.cursor = "";
-      popup.remove();
     });
 
-    map.on("click", "departments", (e) => {
-      location.href = e.features[0].properties.url;
+    map.on("mouseenter", "departments", () => {
+      map.getCanvas().style.cursor = "pointer";
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = {
+    dialog: document.getElementsByClassName("dialog")[0],
+    buttonDialogClose: document.getElementsByClassName(
+      "dialog__button--close"
+    )[0],
+    buttonInfo: document.getElementsByClassName("button__info")[0],
+  };
+
+  const dialogAccepted = JSON.parse(localStorage.getItem("dialogAccepted"));
+
+  const manageDialogOnInit = () => {
+    if (!dialogAccepted) {
+      showDialog();
+    }
+  };
+
+  const hideDialog = () => {
+    elements.dialog.classList.add("hide");
+    localStorage.setItem("dialogAccepted", true);
+  };
+  const showDialog = () => {
+    elements.dialog.classList.remove("hide");
+  };
+  elements.buttonDialogClose.addEventListener("click", hideDialog);
+  elements.buttonInfo.addEventListener("click", showDialog);
+  manageDialogOnInit();
 });

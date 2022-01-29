@@ -15,9 +15,9 @@ export default {
           name: "wngig",
           fullname: "Wydział Nauk Geograficznych i Geologicznych",
           url: "./wngig.html",
-          address: "Bogumiła Krygowskiego 10, Poznań",
+          address: "ul. Bogumiła Krygowskiego 10, Poznań",
           photo:
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwngig.amu.edu.pl%2Fen&psig=AOvVaw3MrgB5y5y8qJYokC9hwyeo&ust=1643383728148000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNiEoM-f0vUCFQAAAAAdAAAAABAD",
+            "https://wngig.amu.edu.pl/__data/assets/image/0024/216708/WNgiGfoto.jpg",
         },
         geometry: {
           type: "Point",
@@ -31,6 +31,9 @@ export default {
           name: "fiz",
           fullname: "Wydział Fizyki",
           url: "./fiz.html",
+          address: "ul. Uniwersytetu Poznańskiego 2, Poznań",
+          photo:
+            "https://imgproxy.geocaching.com/f2c19f938e59c7200e7df265b1eed70e970d8a8e?url=http%3A%2F%2Fpearl.amu.edu.pl%2FXVIminisymp%2FFotki_Minisymp2011%2FWydzialFizykiUAM.jpg",
         },
         geometry: {
           type: "Point",
@@ -44,6 +47,9 @@ export default {
           name: "wmi",
           fullname: "Wydział Matematyki i Informatyki",
           url: "./wmi.html",
+          address: "ul. Uniwersytetu Poznańskiego 4, Poznań",
+          photo:
+            "https://upload.wikimedia.org/wikipedia/commons/c/c0/Wydzia%C5%82_Matematyki_i_Informatyki_UAM.jpg",
         },
         geometry: {
           type: "Point",
@@ -57,6 +63,9 @@ export default {
           name: "bio",
           fullname: "Wydział Biologii",
           url: "./bio.html",
+          address: "ul. Uniwersytetu Poznańskiego 6, Poznań",
+          photo:
+            "https://upload.wikimedia.org/wikipedia/commons/1/1d/Wydzia%C5%82_Biologii_%28cropped%29.jpg",
         },
         geometry: {
           type: "Point",
@@ -70,6 +79,9 @@ export default {
           name: "wnpid",
           fullname: "Wydział Nauk Politycznych i Dziennikarstwa",
           url: "./polityczny.html",
+          address: "ul. Uniwersytetu Poznańskiego 5, Poznań",
+          photo:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Wydzia%C5%82_Nauk_Politycznych_i_Dziennikarstwa_UAM.jpg/2560px-Wydzia%C5%82_Nauk_Politycznych_i_Dziennikarstwa_UAM.jpg",
         },
         geometry: {
           type: "Point",
@@ -83,6 +95,9 @@ export default {
           name: "chem",
           fullname: "Wydział Chemii",
           url: "./chem.html",
+          address: "ul. Uniwersytetu Poznańskiego 8, Poznań",
+          photo:
+            "https://upload.wikimedia.org/wikipedia/commons/7/7d/Wydzia%C5%82_Chemii_UAM.jpg",
         },
         geometry: {
           type: "Point",
@@ -96,6 +111,9 @@ export default {
           name: "hist",
           fullname: "Wydział Historii",
           url: "./hist.html",
+          address: "ul. Uniwersytetu Poznańskiego 7, Poznań",
+          photo:
+            "https://upload.wikimedia.org/wikipedia/commons/9/98/Wydzia%C5%82_Historyczny_UAM.jpg",
         },
         geometry: {
           type: "Point",
