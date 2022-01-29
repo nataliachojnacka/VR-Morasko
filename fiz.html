@@ -2,13 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
     <script src="https://unpkg.com/aframe-mapbox-component/dist/aframe-mapbox-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.controls.min.js"></script>
-
+    <link rel="stylesheet" href="./scene.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -16,51 +13,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-      .navbar {
-        z-index: 999;
-        position: absolute;
-        background-color: #363636ab;
-        width: 100%;
-        height: 9%;
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
-      }
-
-      .title {
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 1%;
-        font-size: 28px;
-        font-family: "Roboto", sans-serif;
-        text-shadow: 1px 1px #444444;
-      }
-      .arrow {
-        font-size: 35px;
-        color: white;
-        text-shadow: 1px 1px #444444;
-      }
-      .title__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: inherit;
-      }
-      .arrow__link {
-        padding-left: 1%;
-      }
-      .hide {
-        display: none;
-      }
-      .a-loader-title {
-        display: none !important;
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar hide">
@@ -114,17 +66,12 @@
         ></a-entity>
         <!-- Left Controller -->
         <a-mixin
-          id="teleport"
-          teleport-controls="cameraRig: #cameraRig; button: trigger; teleportOrigin: #head; collisionEntities: #ground; curveShootingSpeed: 25; curveNumberPoints: 100;"
-        ></a-mixin>
-        <a-mixin
           id="handcursor"
           cursor="downEvents: triggerdown; upEvents: triggerup;"
           raycaster="far: 2; showLine: true; objects: .clickable; a-link;"
         ></a-mixin>
         <a-entity
           id="leftHand"
-          mixin="teleport"
           oculus-touch-controls="hand: left;"
           vive-controls="hand: left;"
           windows-motion-controls="hand: left;"
@@ -134,7 +81,6 @@
         <!-- Right Controller -->
         <a-entity
           id="rightHand"
-          mixin="teleport"
           oculus-touch-controls="hand: right;"
           vive-controls="hand: right;"
           windows-motion-controls="hand: right;"
