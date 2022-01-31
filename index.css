@@ -26,7 +26,7 @@ header {
   align-items: center;
   justify-content: center;
   padding-left: 1%;
-  font-size: 28px;
+  font-size: 4vh;
   text-shadow: 1px 1px #444444;
 }
 
@@ -105,11 +105,11 @@ aside {
   z-index: 999;
   position: absolute;
   background-color: #363636ab;
-  width: fit-content;
-  max-width: 420px;
-  height: fit-content;
+  width: 55vh;
+  overflow: auto;
+  height: 53vh;
   color: white;
-  font-size: 28px;
+  font-size: 2vh;
   margin: auto;
   left: 0;
   right: 0;
@@ -121,13 +121,14 @@ aside {
   align-items: center;
   flex-direction: column;
   font-weight: 300 !important;
+  line-height: 1.4;
 }
 
 .dialog__button {
   text-align: center;
   border: 1px solid transparent;
   padding: 0.3rem 0.7rem;
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.5;
   border-radius: 0.2rem;
   transition: color 0.15s;
@@ -142,7 +143,7 @@ aside {
 }
 
 .dialog__body {
-  font-size: 0.6em;
+  /* font-size: 0.6em; */
   text-align: justify;
   text-justify: inter-word;
 }
@@ -152,7 +153,7 @@ aside {
 }
 
 p {
-  line-height: 1.3rem;
+  /* line-height: 1.3rem; */
   margin-bottom: 20px;
 }
 
@@ -174,6 +175,6 @@ p {
 }
 
 .github__link {
-  font-size: 12px;
+  font-size: 75%;
   text-decoration: underline;
 }
