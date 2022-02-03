@@ -39,15 +39,21 @@
           pxToWorldRatio: 4;"
       ></a-plane>
       <a-assets>
-        <a-asset-item id="wngig" src="./models/wngig/scene.gltf"></a-asset-item>
-        <a-asset-item id="tree" src="./models/tree/scene.gltf"></a-asset-item>
+        <a-asset-item
+          id="wngig"
+          src="./assets/models/wngig/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="tree"
+          src="./assets/models/tree/scene.gltf"
+        ></a-asset-item>
         <a-asset-item
           id="bush"
-          src="./models/cliff_shrub_for_terrain/scene.gltf"
+          src="./assets/models/cliff_shrub_for_terrain/scene.gltf"
         ></a-asset-item>
         <a-asset-item
           id="trees"
-          src="./models/trees_set/scene.gltf"
+          src="./assets/models/trees_set/scene.gltf"
         ></a-asset-item>
       </a-assets>
       <a-entity
@@ -154,11 +160,6 @@
           wasd-controls
         ></a-entity>
         <!-- Left Controller -->
-        <!-- <a-mixin
-          id="teleport"
-          teleport-controls="cameraRig: #cameraRig; button: trigger; teleportOrigin: #head; collisionEntities: #ground; curveShootingSpeed: 25; curveNumberPoints: 100;"
-        ></a-mixin> -->
-        <!--  -->
         <a-entity
           id="leftHand"
           oculus-touch-controls="hand: left;"
